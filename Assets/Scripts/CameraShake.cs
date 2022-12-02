@@ -9,7 +9,7 @@ public class CameraShake : MonoBehaviour
     public Transform camera;
     [SerializeField]
     [Tooltip("Duration of the shaking")]
-    [Range(0, 100)]
+    [Range(0, 50)]
     public float _Duration = 1;
     [SerializeField]
     [Tooltip("Strength of the shaking")]
@@ -17,6 +17,22 @@ public class CameraShake : MonoBehaviour
     public float _Strength = 1;
     [Tooltip("You can click here to make the shake happen manually or see when the shake is active")]
     public bool shouldShake = false;
+
+    [Header("ScreenColorFlash")]
+    [SerializeField]
+    [Tooltip("Drag the ScreenFlash Image from the UI here")]
+    ScreenFlash _colorFlash = null;
+    [SerializeField]
+    [Tooltip("Set whatever color for the flash you want")]
+    Color _screenColor = Color.red;
+    [SerializeField]
+    [Tooltip("Duration of the flash")]
+    [Range(0, 50)]
+    public float _FlashDuration = 1;
+    [SerializeField]
+    [Tooltip("Max Opacity of the Screen Flash")]
+    [Range(0, 1)]
+    public float _maxOpacity = 1;
 
     [Header("Character Objects")]
     [Tooltip("Drag your object in question here")]
@@ -69,5 +85,6 @@ public class CameraShake : MonoBehaviour
     {
         _Object.gameObject.SetActive(false);
         shouldShake = true;
+        _colorFlash.StartFlash(_FlashDuration, _maxOpacity, _screenColor);
     }
 }
