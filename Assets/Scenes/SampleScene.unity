@@ -680,6 +680,7 @@ MonoBehaviour:
   _maxOpacity: 1
   deathFX: {fileID: 8300000, guid: f9f10acc843a8ff498439b121d632f9b, type: 3}
   audioSource: {fileID: 963194230}
+  _Volume: 0.5
   _Object: {fileID: 1673706087}
 --- !u!82 &963194230
 AudioSource:

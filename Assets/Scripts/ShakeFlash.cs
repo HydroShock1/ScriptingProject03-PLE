@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShakeFlash : MonoBehaviour
 {
-    [Header("Camera Shake")]
+    [Header("---Camera Shake---")]
     [Tooltip("Drag your main camera here")]
     public Transform camera;
     [SerializeField]
@@ -19,7 +19,7 @@ public class ShakeFlash : MonoBehaviour
     public bool shouldShake = false;
 
 
-    [Header("ScreenColorFlash")]
+    [Header("---ScreenColorFlash---")]
     [SerializeField]
     [Tooltip("Drag the ScreenFlash Image from the UI here")]
     ScreenFlash _colorFlash = null;
@@ -36,13 +36,19 @@ public class ShakeFlash : MonoBehaviour
     public float _maxOpacity = 1;
 
 
-    [Header("Audio")]
+    [Header("---Audio---")]
     [SerializeField]
     [Tooltip("Put in Your Audio FX")]
     public AudioClip deathFX;
+    [SerializeField]
+    [Tooltip("Put here the Main Camera")]
     public AudioSource audioSource;
+    [SerializeField]
+    [Tooltip("Change the volume")]
+    [Range(0,50)]
+    public float _Volume = 1;
 
-    [Header("Character Object")]
+    [Header("---Character Object---")]
     [Tooltip("Drag your Character in question here")]
     public GameObject _Object;
 
@@ -97,6 +103,6 @@ public class ShakeFlash : MonoBehaviour
         _Object.gameObject.SetActive(false);
         shouldShake = true;
         _colorFlash.StartFlash(_FlashDuration, _maxOpacity, _screenColor);
-        audioSource.PlayOneShot(deathFX, 1);
+        audioSource.PlayOneShot(deathFX, _Volume);
     }
 }
