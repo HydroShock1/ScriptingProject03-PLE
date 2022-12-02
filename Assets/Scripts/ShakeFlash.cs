@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraShake : MonoBehaviour
+public class ShakeFlash : MonoBehaviour
 {
     [Header("Camera Shake")]
     [Tooltip("Drag your main camera here")]
@@ -34,8 +34,8 @@ public class CameraShake : MonoBehaviour
     [Range(0, 1)]
     public float _maxOpacity = 1;
 
-    [Header("Character Objects")]
-    [Tooltip("Drag your object in question here")]
+    [Header("Character Object")]
+    [Tooltip("Drag your Character in question here")]
     public GameObject _Object;
 
 

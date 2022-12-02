@@ -670,13 +670,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 963194228}
-  _Duration: 3
-  _Strength: 2.5
+  _Duration: 1
+  _Strength: 1
   shouldShake: 0
   _colorFlash: {fileID: 360756162}
   _screenColor: {r: 1, g: 0, b: 0, a: 1}
-  _FlashDuration: 3
-  _maxOpacity: 0.186
+  _FlashDuration: 1
+  _maxOpacity: 1
   _Object: {fileID: 1673706087}
 --- !u!1 &1087165720
 GameObject:
