@@ -66,7 +66,6 @@ public class ShakeFlash : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             StartShaking();
-            audioSource.PlayOneShot(deathFX, 1);
         }
 
         if (!_Object.active)
@@ -98,5 +97,6 @@ public class ShakeFlash : MonoBehaviour
         _Object.gameObject.SetActive(false);
         shouldShake = true;
         _colorFlash.StartFlash(_FlashDuration, _maxOpacity, _screenColor);
+        audioSource.PlayOneShot(deathFX, 1);
     }
 }
