@@ -40,10 +40,13 @@ public class ShakeFlash : MonoBehaviour
     [SerializeField]
     [Tooltip("Put in Your Audio FX")]
     public AudioClip deathFX;
+    public AudioSource audioSource;
 
     [Header("Character Object")]
     [Tooltip("Drag your Character in question here")]
     public GameObject _Object;
+
+
 
 
     Vector3 startPosition;
@@ -54,6 +57,7 @@ public class ShakeFlash : MonoBehaviour
         camera = Camera.main.transform;
         startPosition = camera.localPosition;
         initialDuration = _Duration;
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
 
     void Update()
@@ -62,6 +66,7 @@ public class ShakeFlash : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             StartShaking();
+            audioSource.PlayOneShot(deathFX, 1);
         }
 
         if (!_Object.active)
