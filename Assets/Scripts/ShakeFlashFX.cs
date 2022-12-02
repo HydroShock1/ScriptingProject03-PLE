@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShakeFlash : MonoBehaviour
+public class ShakeFlashFX : MonoBehaviour
 {
     [Header("---Camera Shake---")]
     [Tooltip("Drag your main camera here")]
