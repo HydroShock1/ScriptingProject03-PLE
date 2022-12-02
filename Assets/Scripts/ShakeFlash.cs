@@ -18,6 +18,7 @@ public class ShakeFlash : MonoBehaviour
     [Tooltip("You can click here to make the shake happen manually or see when the shake is active")]
     public bool shouldShake = false;
 
+
     [Header("ScreenColorFlash")]
     [SerializeField]
     [Tooltip("Drag the ScreenFlash Image from the UI here")]
@@ -33,6 +34,12 @@ public class ShakeFlash : MonoBehaviour
     [Tooltip("Max Opacity of the Screen Flash")]
     [Range(0, 1)]
     public float _maxOpacity = 1;
+
+
+    [Header("Audio")]
+    [SerializeField]
+    [Tooltip("Put in Your Audio FX")]
+    public AudioClip deathFX;
 
     [Header("Character Object")]
     [Tooltip("Drag your Character in question here")]
